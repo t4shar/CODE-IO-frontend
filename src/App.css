@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homepagewrapper{
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.bg-color{
+  
+  background-color: rgb(44, 39, 39);
+}
+.editorgp{
+  height: 90.5vh;
+}
+.center{
+  text-align: center;
+  margin-top: 5px;
+  /* max-resolution: 0 auto; */
+}
+.formwrapper{
+  background-color: rgb(75, 65, 65);
+  padding: 20px;
+  border-radius: 13px;
+  width: 23vw;
+}
+.logo{
+  margin-left: 0 auto ;
+  height: 13vh;
+  width: 20vw;
+} 
+footer{
+  position: fixed;
+  bottom: 0;
+}
+.inputgroup{
+  display: flex;
+  flex-direction: column;
+}
+.inputbox{
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: antiquewhite;
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#one{
+  text-align: center;
+  margin-top: 0;
+}
+.my{
+  font-weight: bold;
+}
+.loginbutton{
+  color: white;
+  background-color: rgb(73, 132, 204); 
+  width: 100px;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginbutton:hover{
+  background-color: rgb(14, 108, 222); ; 
+}
+.logininfo{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.mx{
+  margin-top: 10px;
+  text-decoration: none;
 }
