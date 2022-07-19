@@ -9,6 +9,10 @@
   
   background-color: rgb(44, 39, 39);
 }
+.policy{
+  position: fixed;
+  right: 51vw;
+}
 .editorgp{
   height: 90.5vh;
 }
