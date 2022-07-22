@@ -28,12 +28,12 @@ function Editorpage() {
     var res = await compileCode(data);
     console.log(res);
     // const finalres = JSON.stringify(res.data)
-    
-      if(res.data.success === true){
-        setoutputarea(res.data.output);
-      }else{
-        setoutputarea(res.data.error)
-      }
+
+    if (res.data.success === true) {
+      setoutputarea(res.data.output);
+    } else {
+      setoutputarea(res.data.error)
+    }
   }
 
   const setlangforeditor = () => {
@@ -48,13 +48,13 @@ function Editorpage() {
   const handleupsave = () => {
     console.log(editorref.current.getValue());
   };
-  const handleupinputchange = (event)=>{
+  const handleupinputchange = (event) => {
     setinputarea(event.target.value);
     console.log(inputarea)
   }
   return (
     <>
-      <Navbar langval={langval} setlangval={setlangval} />
+      <Navbar />
       <div className="editorpagewrapper">
         <div class=" row row-cols-2">
           <div class="col editorgp p-0">
@@ -85,19 +85,19 @@ function Editorpage() {
             <div class="p-2 ggi" style={{ color: 'white' }}>
               <h4 className="center">Write your input below</h4>
               <div class="md-form">
-  <textarea id="form7" class="md-textarea form-control" value={inputarea} 
-  style={{backgroundColor:'rgb(44, 39, 39)',color : 'white'}}
-  onChange={handleupinputchange} rows="10"></textarea>
-</div>
+                <textarea id="form7" class="md-textarea form-control" value={inputarea}
+                  style={{ backgroundColor: 'rgb(44, 39, 39)', color: 'white' }}
+                  onChange={handleupinputchange} rows="10"></textarea>
+              </div>
 
             </div>
             <div class="p-2 ggi" style={{ color: 'white' }}>
               <h4 className="center">Your Output Terminal</h4>
               <div class="md-form">
-  <textarea id="form7" class="md-textarea form-control" value={outputarea} 
-  style={{backgroundColor:'rgb(44, 39, 39)',color : 'white'}}
-  onChange={handleupinputchange} rows="10"></textarea>
-</div>
+                <textarea id="form7" class="md-textarea form-control" value={outputarea}
+                  style={{ backgroundColor: 'rgb(44, 39, 39)', color: 'white' }}
+                  onChange={handleupinputchange} rows="11" readOnly></textarea>
+              </div>
             </div>
           </div>
 
