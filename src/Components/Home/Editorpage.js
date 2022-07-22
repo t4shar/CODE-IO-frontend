@@ -46,6 +46,7 @@ function Editorpage() {
     console.log(langval)
   }
   const handleupsave = () => {
+    let title = prompt("Please enter a title to save")
     console.log(editorref.current.getValue());
   };
   const handleupinputchange = (event) => {
@@ -54,7 +55,7 @@ function Editorpage() {
   }
   return (
     <>
-      <Navbar />
+      {/*   <Navbar /> */}
       <div className="editorpagewrapper">
         <div class=" row row-cols-2">
           <div class="col editorgp p-0">

@@ -12,6 +12,11 @@
 /* .inputboxedit{
   height: 45vh;
 } */
+.spani{
+  font-weight: bolder;
+  color: rgb(13, 239, 96);
+  /* font-size: 20px; */
+}
 .ggi{
   height: 45vh;
   /* background-color: antiquewhite; */
@@ -23,13 +28,29 @@
 .editorgp{
   height: 90.5vh;
 }
+.styled{
+  text-decoration: none;
+  font-weight: bold;
+}
 .center{
   text-align: center;
   margin-top: 5px;
   /* max-resolution: 0 auto; */
 }
+.editbutton{
+  width: 35px;
+  height: 35px;
+}
+#uniqueto{
+  display: none;
+}
+.editbutton:hover + #uniqueto{ display: unset ;}
+.editorpagewrapper{
+  overflow: hidden;
+}
 .formwrapper{
   background-color: rgb(75, 65, 65);
+  /* background-color: rgb(173, 140, 140); */
   padding: 20px;
   border-radius: 13px;
   width: 23vw;

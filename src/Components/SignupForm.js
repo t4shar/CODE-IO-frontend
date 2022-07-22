@@ -20,9 +20,6 @@ function SignupForm() {
                 <Link className='btn loginbutton mx' to='/'>Login</Link>
             </div>
         </div>
-        <footer>
-            <h4>Build by Tushar Codes 💚</h4>
-        </footer>
     </div>
   )
 }
