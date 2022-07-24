@@ -13,6 +13,8 @@ function Card({mode,title,code,tag}) {
   <div class="card-body" style={{backgroundColor : 'rgb(173, 140, 140)' }}>
     <h5 class="card-title">{tag}</h5>
     <p class="card-text">{code}</p> 
+    <img src="/Delete.png" className='deletebuttn' alt="" />
+    {/* <span id='Delete'>Delete</span> */}
     <img src="/edit.png" className='editbutton'  alt="edit button"/>
 
     <span id='uniqueto'>Edit Code</span>

@@ -1,8 +1,17 @@
 import React from "react";
 import {NavLink , Link} from 'react-router-dom'
-function Navbar({logitrue}) {
+
+// import { ToastContainer, toast } from 'react-toastify';
+
+function Navbar({logintrue}) {
+  // for pop up toast
+  // const notify = () => toast("Wow so easy!");
+
   var temp_var = "p-2 btn btn-info mx-3";
-  // if(logitrue  == true) temp_var+=" disabled"
+  
+  if(logintrue  == 'false'){ temp_var+=" disabled"
+    // notify();
+  }
   return (
     
     <>

@@ -69,8 +69,8 @@ function Editorpage() {
                 </DropdownButton>
               </div>
               <div className="col">
-                <button className="btn btn-primary policy" onClick={handleupsave}>Save</button>
-                <a className="btn btn-primary" onClick={handleuprun}>RUN</a>
+                <button className="btn btn-info policy" onClick={handleupsave}>Save</button>
+                <a className="btn btn-info" onClick={handleuprun}>RUN</a>
               </div>
             </div>
             <Editor

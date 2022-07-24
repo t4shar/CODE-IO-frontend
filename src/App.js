@@ -11,14 +11,17 @@ import Codes from './Components/Mycodes/Codes';
 
 
 function App() {
-  const [logitrue, setlogitrue] = useState(true);
+  const [logintrue, setlogintrue] = useState('true');
+
 
   return (
     <>
       <Router>
-          <Navbar logitrue/>
+          <Navbar logintrue = {logintrue} />
         <Routes>
           <Route path="/" element={<Editorpage/>}> </Route>
+          <Route path="/login" element={<LoginForm/>}> </Route>
+          <Route path="/signup" element={<SignupForm/>}> </Route>
           <Route path="/mycodes" element={<Codes/>}> </Route>
         </Routes>
       </Router>

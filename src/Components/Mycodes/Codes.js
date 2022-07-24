@@ -13,7 +13,7 @@ function Codes() {
         <Card mode={mode} code={code} tag={tag} title={title}/>
         <Card mode={mode} code={code} tag={tag} title={title}/>
         <Card mode={mode} code={code} tag={tag} title={title}/>
-        <Card mode={mode} code={code} tag={tag} title={title}   />
+        <Card mode={mode} code={code} tag={tag} title={title}/>
 
     </div>
   )

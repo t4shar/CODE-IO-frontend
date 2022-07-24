@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://t4shar.github.io/CODE-IO-frontend",
+  "homepage": "http://t4shar.github.io/CODE-IO-frontend",
   "dependencies": {
     "@monaco-editor/react": "^4.4.5",
     "@testing-library/jest-dom": "^5.16.4",
@@ -19,6 +19,7 @@
     "react-quilljs": "^1.3.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^2.1.3",
+    "react-toastify": "^9.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -26,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"npm run start",
+    "predeploy": "npm run start",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
