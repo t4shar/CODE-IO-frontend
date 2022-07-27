@@ -1,12 +1,16 @@
-import React, { useRef, useState } from "react";
-import Navbar from "../Navbar";
+import React, { useContext, useRef, useState } from "react";
+// import Navbar from "../Navbar";
 import Editor from "@monaco-editor/react";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { compileCode } from '../../Api/index'
-var qs = require("qs");
+import CodeContext from "../../Context/Codes/CodeContext";
 
 function Editorpage() {
+
+  const context = useContext(CodeContext);
+  const {addCode} = context
+
   const [setcodemark, setsetcodemark] = useState("//Write your code below");
   const [langval, setlangval] = useState("langauge");
   const [inputarea, setinputarea] = useState('')
@@ -37,8 +41,8 @@ function Editorpage() {
   }
 
   const setlangforeditor = () => {
-    if (langval == 'py') return "python"
-    if (langval == 'cpp') return "c++"
+    if (langval === 'py') return "python"
+    if (langval === 'cpp') return "c++"
     return 'java'
   }
   const handleuplang = (e) => {
@@ -47,7 +51,9 @@ function Editorpage() {
   }
   const handleupsave = () => {
     let title = prompt("Please enter a title to save")
-    console.log(editorref.current.getValue());
+    const tag = langval;
+    const description =  editorref.current.getValue()
+    addCode(title,description,tag);
   };
   const handleupinputchange = (event) => {
     setinputarea(event.target.value);
@@ -57,8 +63,8 @@ function Editorpage() {
     <>
       {/*   <Navbar /> */}
       <div className="editorpagewrapper">
-        <div class=" row row-cols-2">
-          <div class="col editorgp p-0">
+        <div className=" row row-cols-2">
+          <div className="col editorgp p-0">
             <div className="row row-cols-2">
               <div className="col">
 
@@ -70,7 +76,7 @@ function Editorpage() {
               </div>
               <div className="col">
                 <button className="btn btn-info policy" onClick={handleupsave}>Save</button>
-                <a className="btn btn-info" onClick={handleuprun}>RUN</a>
+                <a className="btn btn-info"  onClick={handleuprun}>RUN</a>
               </div>
             </div>
             <Editor
@@ -82,20 +88,20 @@ function Editorpage() {
               onMount={handleEditorDidMount}
             />
           </div>
-          <div class="d-flex flex-column p-0">
-            <div class="p-2 ggi" style={{ color: 'white' }}>
+          <div className="d-flex flex-column p-0">
+            <div className="p-2 ggi" style={{ color: 'white' }}>
               <h4 className="center">Write your input below</h4>
-              <div class="md-form">
-                <textarea id="form7" class="md-textarea form-control" value={inputarea}
+              <div className="md-form">
+                <textarea id="form7" className="md-textarea form-control" value={inputarea}
                   style={{ backgroundColor: 'rgb(44, 39, 39)', color: 'white' }}
                   onChange={handleupinputchange} rows="10"></textarea>
               </div>
 
             </div>
-            <div class="p-2 ggi" style={{ color: 'white' }}>
+            <div className="p-2 ggi" style={{ color: 'white' }}>
               <h4 className="center">Your Output Terminal</h4>
-              <div class="md-form">
-                <textarea id="form7" class="md-textarea form-control" value={outputarea}
+              <div className="md-form">
+                <textarea id="form7" className="md-textarea form-control" value={outputarea}
                   style={{ backgroundColor: 'rgb(44, 39, 39)', color: 'white' }}
                   onChange={handleupinputchange} rows="11" readOnly></textarea>
               </div>

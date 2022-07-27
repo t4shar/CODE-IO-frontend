@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink , Link} from 'react-router-dom'
+import {NavLink } from 'react-router-dom'
 
 // import { ToastContainer, toast } from 'react-toastify';
 
@@ -9,7 +9,7 @@ function Navbar({logintrue}) {
 
   var temp_var = "p-2 btn btn-info mx-3";
   
-  if(logintrue  == 'false'){ temp_var+=" disabled"
+  if(logintrue  === 'false'){ temp_var+=" disabled"
     // notify();
   }
   return (

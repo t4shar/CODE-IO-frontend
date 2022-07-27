@@ -1,13 +1,14 @@
 import './App.css';
 import React, { useState } from 'react';
 import {
-  BrowserRouter as Router, Switch,Route,Link, Routes
+  BrowserRouter as Router,Route, Routes
 } from "react-router-dom";
 import LoginForm from './Components/LoginForm';
 import Editorpage from './Components/Home/Editorpage';
 import SignupForm from './Components/SignupForm';
 import Navbar from './Components/Navbar';
 import Codes from './Components/Mycodes/Codes';
+import Codestate from './Context/Codes/Codestate';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+    <Codestate>
       <Router>
           <Navbar logintrue = {logintrue} />
         <Routes>
@@ -25,6 +27,7 @@ function App() {
           <Route path="/mycodes" element={<Codes/>}> </Route>
         </Routes>
       </Router>
+    </Codestate>
     </>
   );
 }
