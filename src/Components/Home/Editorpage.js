@@ -51,6 +51,10 @@ function Editorpage() {
   }
   const handleupsave = () => {
     let title = prompt("Please enter a title to save")
+    if(title.length < 5){
+      alert('Title Length should be greater then 5')
+      return;
+    } 
     const tag = langval;
     const description =  editorref.current.getValue()
     addCode(title,description,tag);
@@ -75,8 +79,8 @@ function Editorpage() {
                 </DropdownButton>
               </div>
               <div className="col">
-                <button className="btn btn-info policy" onClick={handleupsave}>Save</button>
-                <a className="btn btn-info"  onClick={handleuprun}>RUN</a>
+                <button className="btn btn-primary policy" onClick={handleupsave}>Save</button>
+                <a className="btn btn-primary" role='button' onClick={handleuprun}>RUN</a>
               </div>
             </div>
             <Editor

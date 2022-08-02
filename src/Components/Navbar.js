@@ -4,14 +4,7 @@ import {NavLink } from 'react-router-dom'
 // import { ToastContainer, toast } from 'react-toastify';
 
 function Navbar({logintrue}) {
-  // for pop up toast
-  // const notify = () => toast("Wow so easy!");
-
-  var temp_var = "p-2 btn btn-info mx-3";
   
-  if(logintrue  === 'false'){ temp_var+=" disabled"
-    // notify();
-  }
   return (
     
     <>
@@ -30,9 +23,9 @@ function Navbar({logintrue}) {
           {/* <NavLink className="styled">
             Editor
           </NavLink> */}
-          <div className="d-flex flex-row-reverse bd-highlight">
-            <NavLink to="/" className={temp_var}>Logout</NavLink>
-            <NavLink to="/mycodes" className={temp_var}>Mycodes</NavLink>
+          <div>
+            <NavLink to="/login" className=" btn btn-primary mx-3">Login / Signup</NavLink>
+            <NavLink to="/mycodes" className=" btn btn-primary mx-3">Mycodes</NavLink>
           </div>
         </div>
       </nav>
