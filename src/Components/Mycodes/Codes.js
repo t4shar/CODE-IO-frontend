@@ -1,14 +1,18 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import Card from './Card'
 import CodeContext from '../../Context/Codes/CodeContext'
+import {useNavigate} from 'react-router-dom';
 
 function Codes() {
-
+  const navigate = useNavigate();
   const a = useContext(CodeContext);
   const { code, getCodes, editCode } = a;
 
   useEffect(() => {
-    getCodes();
+    if(localStorage.getItem('token')  === null ){
+      navigate('/login')
+    }
+   else  getCodes();
   }, [])
 
   const [etag, setetag] = useState(null)

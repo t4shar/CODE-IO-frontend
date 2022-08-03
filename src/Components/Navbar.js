@@ -1,10 +1,23 @@
 import React from "react";
-import {NavLink } from 'react-router-dom'
+import {NavLink , useLocation } from 'react-router-dom'
 
 // import { ToastContainer, toast } from 'react-toastify';
 
 function Navbar({logintrue}) {
-  
+  let classses = "btn btn-primary mx-3";
+  const location = useLocation();
+  const style = {
+    display : 'none'
+  }
+  const style2 = {
+    display : 'unset'
+  }
+
+  const handeleuplogout = () =>{ 
+    localStorage.removeItem('token')
+   location.reload();
+   }
+
   return (
     
     <>
@@ -24,8 +37,9 @@ function Navbar({logintrue}) {
             Editor
           </NavLink> */}
           <div>
-            <NavLink to="/login" className=" btn btn-primary mx-3">Login / Signup</NavLink>
-            <NavLink to="/mycodes" className=" btn btn-primary mx-3">Mycodes</NavLink>
+            <NavLink to="/login" className=" btn btn-primary mx-3" id="btn1" style={ localStorage.getItem('token') !== null ? style : style2 } >Login / Signup</NavLink>
+            <NavLink to="/mycodes" className=" btn btn-primary mx-3" id="btn2">Mycodes</NavLink>
+            <NavLink to="/" className=" btn btn-primary mx-3" id="btn3" style={ localStorage.getItem('token') !== null ? style2 : style } onClick={ handeleuplogout } >LogOut</NavLink>
           </div>
         </div>
       </nav>
